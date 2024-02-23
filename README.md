@@ -31,7 +31,7 @@
     - webpackで生成されたファイルを削除する（編集推奨）
 
 # 構成
-.
+<pre>.
 ├── babel.config.js
 ├── dist                // srcからbuildした表示用ファイルをまとめる
 │   ├── assets
@@ -50,7 +50,7 @@
 │   ├── script          // javascript,typescritpなど
 │   └── stylesheets     // cssなど
 ├── tsconfig.json
-└── webpack.config.js
+└── webpack.config.js</pre>
 
 # 補足
 - https://github.com/topics/threejs-example
