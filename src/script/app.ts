@@ -90,16 +90,6 @@ function render() {
   renderer.render(scene, camera);
 }
 
-/* マウスホイールイベント */
-function onMouseWheel(event: WheelEvent) {
-  const direction = event.deltaY < 0 ? 1 : -1;
-  const factor = 0.1 * direction;
-
-  // カメラの位置をシーンの中心に向かって拡大縮小
-  const newPosition = camera.position.clone().sub(scene.position).multiplyScalar(1 + factor);
-  camera.position.copy(newPosition.add(scene.position));
-}
-
 // 表示領域をウィンドウサイズに合わせる
 function onResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
@@ -112,5 +102,3 @@ window.addEventListener("load", init);
 
 // リサイズイベント
 window.addEventListener("resize", onResize, false);
-// カメラ操作
-document.addEventListener('wheel', onMouseWheel);
